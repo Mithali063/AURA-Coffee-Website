@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AURA Coffee</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+
+function openOrder() {
+    document.getElementById("orderPopup").style.display = "flex";
+}
+
+function closeOrder() {
+    document.getElementById("orderPopup").style.display = "none";
+}
+
+
+/* AUTOMATIC ORDER TOTAL */
+
+function calculateTotal() {
+
+    const coffeePrice = Number(
+        document.getElementById("coffee").value
+    );
+
+    const quantity = Number(
+        document.getElementById("quantity").value
+    );
+
+    const total = coffeePrice * quantity;
+
+    document.getElementById("totalPrice").textContent =
+        "₹" + total;
+}
+
+
+/* PLACE ORDER */
+
+function placeOrder(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+
+    /* Check name */
+
+    if (name === "") {
+
+        alert("⚠️ Please enter your name.");
+
+        return;
+    }
+
+
+    /* Check phone */
+
+    if (phone === "") {
+
+        alert("⚠️ Please enter your phone number.");
+
+        return;
+    }
+
+
+    /* Check 10-digit phone number */
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+
+        alert("⚠️ Please enter a valid 10-digit phone number.");
+
+        return;
+    }
+
+
+    /* Get order details */
+
+    const coffee =
+        document.getElementById("coffee").selectedOptions[0].text;
+
+    const quantity =
+        document.getElementById("quantity").value;
+
+    const total =
+        document.getElementById("totalPrice").textContent;
+
+
+    /* Order successful */
+
+    alert(
+        "✅ Order received!\n\n" +
+        "Thank you, " + name + " ☕\n\n" +
+        coffee + "\n" +
+        "Quantity: " + quantity + "\n" +
+        "Total: " + total + "\n\n" +
+        "Your AURA Coffee order has been received."
+    );
+
+
+    /* Close popup */
+
+    document.getElementById("orderPopup").style.display = "none";
+
+
+    /* Clear form */
+
+    document.querySelector(".order-box form").reset();
+
+
+    /* Reset total */
+
+    calculateTotal();
+}
+
+</script>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>●</span>
+            AURA COFFEE
+        </div>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#" class="order-btn" onclick="openOrder(); return false;">
+    Order Online
+</a>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                — CRAFTED FOR COFFEE LOVERS
+            </p>
+
+            <h1>
+                Start your day <br>
+                with <em>better coffee.</em>
+            </h1>
+
+            <p class="hero-description">
+                Freshly roasted beans, carefully brewed for your perfect
+                everyday cup.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="primary-btn">
+                    Explore Menu
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    Our Story
+                </a>
+
+            </div>
+
+
+            <div class="hero-features">
+
+                <div>
+                    <h3>Premium</h3>
+                    <p>BEANS</p>
+                </div>
+
+                <div>
+                    <h3>Freshly</h3>
+                    <p>ROASTED</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+            <img src="images/Coffee.jpg" alt="Cup of coffee">
+        </div>
+
+    </section>
+
+
+    <!-- ================= OUR STORY ================= -->
+
+    <section class="story" id="about">
+
+        <div class="story-image">
+            <img src="images/barista.jpg" alt="Barista preparing coffee">
+        </div>
+
+
+        <div class="story-content">
+
+            <p class="story-label">
+                — OUR STORY
+            </p>
+
+            <h2>
+                Coffee made with care,<br>
+                <em>from bean to cup.</em>
+            </h2>
+
+            <p class="story-description">
+                AURA was built on a simple belief — that everyday coffee
+                should feel extraordinary. We source with intention,
+                roast with patience, and brew with care.
+            </p>
+
+
+            <div class="story-points">
+
+                <div class="story-point">
+
+                    <span>•</span>
+
+                    <div>
+                        <h3>Quality Beans</h3>
+                        <p>
+                            Thoughtfully sourced from carefully selected origins.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="story-point">
+
+                    <span>•</span>
+
+                    <div>
+                        <h3>Fresh Roasting</h3>
+                        <p>
+                            Small-batch roasting preserves depth and character.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="story-point">
+
+                    <span>•</span>
+
+                    <div>
+                        <h3>Crafted with Care</h3>
+                        <p>
+                            Every step handled with intention, from start to finish.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="#about" class="story-btn">
+                Discover Our Story
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY AURA ================= -->
+
+    <section class="why-aura">
+
+        <div class="why-heading">
+
+            <p class="why-label">
+                — WHY AURA —
+            </p>
+
+            <h2>
+                Better coffee starts<br>
+                with <em>better choices.</em>
+            </h2>
+
+            <p class="why-description">
+                From carefully selected beans to thoughtful brewing,
+                every detail is designed to make your everyday coffee
+                experience better.
+            </p>
+
+        </div>
+
+
+        <div class="why-features">
+
+            <div class="why-card">
+
+                <div class="why-icon">◯</div>
+
+                <h3>QUALITY BEANS</h3>
+
+                <p>
+                    Carefully selected beans chosen for balanced flavor
+                    and quality.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">☕</div>
+
+                <h3>FRESHLY CRAFTED</h3>
+
+                <p>
+                    Coffee prepared with attention to freshness,
+                    consistency and taste.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">♡</div>
+
+                <h3>MADE WITH CARE</h3>
+
+                <p>
+                    Thoughtful preparation designed to make every cup
+                    feel special.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FAVORITES / MENU ================= -->
+
+    <section class="favorites" id="menu">
+
+        <div class="favorites-heading">
+
+            <p class="favorites-label">
+                — OUR FAVORITES —
+            </p>
+
+            <h2>
+                Coffee worth <em>slowing</em><br>
+                <em>down for.</em>
+            </h2>
+
+            <p class="favorites-description">
+                Discover a few of our carefully crafted favorites,
+                made for every kind of coffee moment.
+            </p>
+
+        </div>
+
+
+        <div class="coffee-cards">
+
+
+            <!-- AURA Latte -->
+
+            <div class="coffee-card">
+
+                <img src="images/latte.jpg" alt="AURA Latte">
+
+                <div class="coffee-info">
+
+                    <div class="coffee-title">
+                        <h3>AURA Latte</h3>
+                        <span>₹220</span>
+                    </div>
+
+                    <p>
+                        Smooth espresso with creamy steamed milk.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Cappuccino -->
+
+            <div class="coffee-card">
+
+                <img src="images/cappuccino.jpg" alt="Classic Cappuccino">
+
+                <div class="coffee-info">
+
+                    <div class="coffee-title">
+                        <h3>Classic Cappuccino</h3>
+                        <span>₹200</span>
+                    </div>
+
+                    <p>
+                        Rich espresso balanced with velvety milk foam.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Cold Brew -->
+
+            <div class="coffee-card">
+
+                <img src="images/coldbrew.jpg" alt="Cold Brew">
+
+                <div class="coffee-info">
+
+                    <div class="coffee-title">
+                        <h3>Cold Brew</h3>
+                        <span>₹240</span>
+                    </div>
+
+                    <p>
+                        Slow-steeped coffee with a smooth, refreshing finish.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-button">
+            <a href="#menu">Explore Menu</a>
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="contact-heading">
+
+            <p class="contact-label">
+                — VISIT AURA —
+            </p>
+
+            <h2>
+                Your daily coffee,<br>
+                <em>waiting for you.</em>
+            </h2>
+
+            <p class="contact-description">
+                Come by, slow down, and enjoy a cup made with care.
+            </p>
+
+        </div>
+
+
+        <div class="contact-details">
+
+            <div class="contact-box">
+
+                <p class="contact-small-title">
+                    LOCATION
+                </p>
+
+                <h3>AURA Coffee</h3>
+
+                <p>
+                    Belagavi,<br>
+                    Karnataka
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <p class="contact-small-title">
+                    OPENING HOURS
+                </p>
+
+                <h3>Monday – Saturday</h3>
+                <p>8:00 AM – 9:00 PM</p>
+
+                <h3>Sunday</h3>
+                <p>9:00 AM – 8:00 PM</p>
+
+            </div>
+
+        </div>
+
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Belagavi%2C%20Karnataka"
+           class="directions-btn"
+           target="_blank">
+            Get Directions
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <h2>
+                    <span>●</span>
+                    AURA COFFEE
+                </h2>
+
+                <p>
+                    Better coffee. Better moments.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 AURA Coffee. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+<!-- =========================
+     ORDER POPUP
+========================= -->
+
+<div class="order-popup" id="orderPopup">
+
+    <div class="order-box">
+
+        <button type="button" class="close-order" onclick="closeOrder()">
+            &times;
+        </button>
+
+        <p class="order-label">— ORDER ONLINE —</p>
+
+        <h2>
+            Your coffee,<br>
+            <em>your way.</em>
+        </h2>
+
+        <form onsubmit="placeOrder(event)">
+
+            <label for="coffee">Choose your coffee</label>
+
+            <select id="coffee" onchange="calculateTotal()">
+                <option value="220">AURA Latte - ₹220</option>
+                <option value="200">Classic Cappuccino - ₹200</option>
+                <option value="240">Cold Brew - ₹240</option>
+            </select>
+
+
+            <label for="quantity">Quantity</label>
+
+            <select id="quantity" onchange="calculateTotal()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div class="order-total">
+                <span>Total</span>
+                <strong id="totalPrice">₹220</strong>
+            </div>
+
+
+            <label for="name">Your name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="phone">Phone number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                 required
+            >
+
+
+            <div class="order-actions">
+
+                <button type="submit" class="place-order">
+                    Place Order
+                </button>
+
+                <button type="button" class="cancel-order" onclick="closeOrder()">
+                    Cancel
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</html>

@@ -1,0 +1,1318 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5efe6;
+    color: #2c1b12;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 8%;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #9a6b43;
+    margin-right: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c1b12;
+    font-size: 15px;
+}
+
+.order-btn {
+    text-decoration: none;
+
+    background-color: #2c1b12;
+    color: white;
+
+    padding: 14px 25px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+/* Hero Section */
+
+.hero {
+    padding: 70px 8% 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-title {
+    color: #9a6b43;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 70px;
+    line-height: 1.05;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.hero h1 em {
+    color: #8b5638;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background-color: #8b5638;
+    color: white;
+}
+
+.secondary-btn {
+    color: #2c1b12;
+    border: 1px solid #b99a84;
+}
+.hero-image {
+    width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 180px 180px 30px 30px;
+}
+/* Hero Features */
+
+.hero-features {
+    display: flex;
+    align-items: flex-start;
+    width: 430px;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #d8c7b8;
+}
+
+.hero-features > div {
+    width: 50%;
+}
+
+.hero-features > div:first-child {
+    border-right: 1px solid #d8c7b8;
+    margin-right: 30px;
+    padding-right: 30px;
+}
+
+.hero-features h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+}
+
+.hero-features p {
+    color: #9a6b43;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.hero-image img {
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 180px 180px 30px 30px;
+}
+
+/* Hero Features */
+
+.hero-features {
+    display: flex;
+    align-items: flex-start;
+    width: 430px;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #d8c7b8;
+}
+
+.hero-features > div {
+    width: 50%;
+}
+
+.hero-features > div:first-child {
+    border-right: 1px solid #d8c7b8;
+    margin-right: 30px;
+    padding-right: 30px;
+}
+
+.hero-features h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+}
+
+.hero-features p {
+    color: #9a6b43;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+/* Our Story Section */
+
+.story {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    padding: 100px 8%;
+    background-color: #f8f2e9;
+}
+
+.story-image {
+    width: 48%;
+}
+
+.story-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.story-content {
+    width: 45%;
+}
+
+.story-label {
+    color: #9a6b43;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.story-content h2 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.story-content h2 em {
+    color: #8b5638;
+}
+
+.story-description {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 520px;
+}
+/* Story Points */
+
+.story-points {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.story-point {
+    display: flex;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #dfd2c5;
+}
+
+.story-point span {
+    color: #9a6b43;
+    font-size: 20px;
+}
+
+.story-point h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.story-point p {
+    color: #6f6259;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.story-btn {
+    display: inline-block;
+    background-color: #8b5638;
+    color: white;
+
+    padding: 15px 25px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* Why Aura Section */
+
+.why-aura {
+    padding: 100px 8%;
+    text-align: center;
+    background-color: #f5efe6;
+}
+
+.why-heading {
+    max-width: 700px;
+    margin: 0 auto 70px;
+}
+
+.why-label {
+    color: #9a6b43;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.why-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.why-heading h2 em {
+    color: #8b5638;
+}
+
+.why-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6f6259;
+}
+
+.why-features {
+    display: flex;
+    justify-content: center;
+}
+
+.why-card {
+    width: 33.33%;
+    padding: 0 45px;
+}
+
+.why-card:not(:last-child) {
+    border-right: 1px solid #dfd2c5;
+}
+
+.why-icon {
+    color: #9a6b43;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.why-card h3 {
+    color: #9a6b43;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    color: #6f6259;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.favorites-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6f5849;
+}
+/* ========================================
+   OUR FAVORITES / COFFEE MENU
+======================================== */
+
+.favorites {
+    padding: 100px 8%;
+    background-color: #eee4d6;
+}
+
+/* Heading area */
+
+.favorites-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.favorites-label {
+    color: #9a6b43;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.favorites-header h2 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: normal;
+    color: #2c1b12;
+    margin-bottom: 25px;
+}
+
+.favorites-header h2 em {
+    color: #8b5638;
+    font-weight: normal;
+}
+
+.favorites-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6f5849;
+}
+
+
+/* Three coffee cards */
+
+.coffee-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.coffee-card {
+    width: 33.33%;
+    background-color: #f8f1e8;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+
+/* Coffee images */
+
+.coffee-image {
+    width: 100%;
+    height: 270px;
+}
+
+.coffee-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Card information */
+
+.coffee-info {
+    padding: 22px;
+}
+
+.coffee-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.coffee-title h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #2c1b12;
+}
+
+.coffee-title span {
+    color: #8b5638;
+    font-size: 15px;
+}
+
+.coffee-info p {
+    color: #765f50;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Explore Menu button */
+
+.menu-button {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.menu-button a {
+    display: inline-block;
+    text-decoration: none;
+    color: #2c1b12;
+    border: 1px solid #b99a84;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* =========================
+   CONTACT / VISIT SECTION
+========================= */
+
+.contact {
+    padding: 100px 8%;
+    text-align: center;
+    background-color: #f5efe6;
+}
+
+.contact-heading {
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.contact-label {
+    color: #9a6b43;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.contact-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.contact-heading h2 em {
+    color: #8b5638;
+    font-weight: normal;
+}
+
+.contact-description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6d5141;
+}
+
+
+/* Contact information */
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+    max-width: 800px;
+    margin: 0 auto 45px;
+
+    padding: 40px 0;
+
+    border-top: 1px solid #d8c7b8;
+    border-bottom: 1px solid #d8c7b8;
+}
+
+.contact-box {
+    width: 300px;
+}
+
+.contact-small-title {
+    color: #9a6b43;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.contact-box h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.contact-box p {
+    line-height: 1.6;
+    color: #6d5141;
+}
+
+.contact-box h3:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+
+/* Directions Button */
+
+.directions-btn {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background-color: #8b5638;
+    color: white;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 30px;
+}
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #2c1b12;
+    color: #f5efe6;
+    padding: 55px 8% 25px;
+    margin-top: 0;
+}
+
+/* Top part of footer */
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(245, 239, 230, 0.2);
+}
+
+/* AURA Coffee brand */
+
+.footer-brand h2 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-brand h2 span {
+    color: #b07a4a;
+    margin-right: 8px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: #cdbfb5;
+}
+
+/* Footer navigation */
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #f5efe6;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #b07a4a;
+}
+
+/* Copyright */
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.footer-bottom p {
+    color: #a99588;
+    font-size: 13px;
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .order-btn {
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding: 50px 5% 70px;
+        gap: 45px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 420px;
+        border-radius: 120px 120px 25px 25px;
+    }
+
+    .hero-features {
+        flex-wrap: wrap;
+    }
+
+
+    /* Our Story */
+    .story {
+        flex-direction: column;
+        padding: 70px 5%;
+        gap: 45px;
+    }
+
+    .story-image,
+    .story-content {
+        width: 100%;
+    }
+
+    .story-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .story-content h2 {
+        font-size: 42px;
+    }
+
+
+    /* Why AURA */
+    .why-aura {
+        padding: 70px 5%;
+    }
+
+    .why-heading h2 {
+        font-size: 42px;
+    }
+
+    .why-features {
+        flex-direction: column;
+    }
+
+    .why-card {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #d8c7b8;
+        padding: 30px 10px;
+    }
+
+
+    /* Coffee Menu */
+    .menu {
+        padding: 70px 5%;
+    }
+
+    .menu-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Visit AURA */
+    .contact {
+        padding: 70px 5%;
+    }
+
+    .contact h2 {
+        font-size: 45px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+
+    /* Footer */
+    .footer {
+        padding: 45px 5% 25px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+/* Main buttons */
+
+.primary-btn,
+.secondary-btn,
+.order-btn,
+.story-btn,
+.menu-button a,
+.directions-btn {
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover,
+.order-btn:hover,
+.story-btn:hover,
+.menu-button a:hover,
+.directions-btn:hover {
+    background-color: #2c1b12;
+    transform: translateY(-3px);
+}
+
+
+/* Secondary button */
+
+.secondary-btn:hover {
+    background-color: #2c1b12;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Coffee cards */
+
+.coffee-card {
+    transition: 0.3s ease;
+}
+
+.coffee-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Navbar links */
+
+.nav-links a {
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #9a6b43;
+}
+/* =========================
+   ORDER POPUP
+========================= */
+
+.order-popup {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(44, 27, 18, 0.65);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+
+.order-box {
+    position: relative;
+
+    width: 90%;
+    max-width: 450px;
+
+    background-color: #f5efe6;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.close-order {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+
+    color: #2c1b12;
+
+    cursor: pointer;
+}
+
+
+.order-label {
+    color: #9a6b43;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.order-box h2 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+.order-box h2 em {
+    color: #8b5638;
+}
+
+
+.order-box form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.order-box label {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-top: 8px;
+}
+
+
+.order-box input,
+.order-box select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cdbfb5;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    color: #2c1b12;
+
+    font-size: 14px;
+}
+
+
+.place-order {
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #8b5638;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.place-order:hover {
+    background-color: #2c1b12;
+
+    transform: translateY(-2px);
+}
+/* =========================
+   ORDER BUTTONS
+========================= */
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.order-actions .place-order {
+    margin-top: 0;
+}
+
+.cancel-order {
+    padding: 12px;
+
+    border: 1px solid #b99a84;
+    border-radius: 30px;
+
+    background-color: transparent;
+    color: #2c1b12;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.cancel-order:hover {
+    background-color: #2c1b12;
+    color: white;
+}
+/* =========================
+   CLOSE ORDER POPUP
+========================= */
+
+.order-box {
+    position: relative;
+}
+
+.close-order {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #b99a84;
+    border-radius: 50%;
+
+    background-color: #f5efe6;
+    color: #2c1b12;
+
+    font-size: 24px;
+    line-height: 32px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+
+    transition: 0.3s ease;
+}
+
+.close-order:hover {
+    background-color: #2c1b12;
+    color: white;
+    transform: rotate(90deg);
+}
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .order-btn {
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+    .hero {
+        flex-direction: column;
+        padding: 50px 5% 70px;
+        gap: 45px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 420px;
+    }
+
+
+    /* OUR STORY */
+    .story {
+        flex-direction: column;
+        padding: 70px 5%;
+        gap: 45px;
+    }
+
+    .story-image,
+    .story-content {
+        width: 100%;
+    }
+
+    .story-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .story-content h2 {
+        font-size: 42px;
+    }
+
+
+    /* WHY AURA */
+    .why-aura {
+        padding: 70px 5%;
+    }
+
+    .why-heading h2 {
+        font-size: 42px;
+    }
+
+    .why-features {
+        flex-direction: column;
+    }
+
+    .why-card {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #d8c7b8;
+        padding: 30px 10px;
+    }
+
+
+    /* FAVORITES / MENU */
+    .favorites {
+        padding: 70px 5%;
+    }
+
+    .coffee-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .coffee-card {
+        width: 100%;
+    }
+
+    .coffee-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+
+    /* CONTACT */
+    .contact {
+        padding: 70px 5%;
+    }
+
+    .contact-heading h2 {
+        font-size: 45px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        padding: 45px 5% 25px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+
+    /* ORDER POPUP */
+    .order-box {
+        width: 90%;
+        max-width: 450px;
+        padding: 35px 25px;
+    }
+
+}
+/* =========================
+   ORDER TOTAL
+========================= */
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px 0;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #d8c7b8;
+    border-bottom: 1px solid #d8c7b8;
+}
+
+.order-total span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.order-total strong {
+    font-size: 20px;
+    color: #8b5638;
+}
